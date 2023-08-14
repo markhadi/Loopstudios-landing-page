@@ -1,59 +1,317 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Loopstudios landing page</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-  About
-  Careers
-  Events
-  Products
-  Support
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
 
-  Immersive experiences that deliver
+    <link rel="stylesheet" href="./dist/output.css" />
+    <link rel="stylesheet" href="./dist/animate-menu.css" />
 
-  The leader in interactive VR
+    <title>Frontend Mentor | Loopstudios landing page</title>
+  </head>
+  <body>
+    <header>
+      <div
+        class="absolute w-full h-full bg-verydarkgray-70 mix-blend-multiply z-0"
+      ></div>
 
-  Founded in 2011, Loopstudios has been producing world-class virtual reality 
-  projects for some of the best companies around the globe. Our award-winning 
-  creations have transformed businesses through digital experiences that bind 
-  to their brand.
+      <section
+        class="h-full w-full flex flex-col pt-10 px-6 z-[1] max-w-[1110px] mx-auto xl:pt-16 xl:px-0"
+      >
+        <nav>
+          <a href="#">
+            <img src="./images/logo.svg" alt="Loopstudios" class="h-6 sm:h-8" />
+          </a>
+          <a href="#" id="icon-hamburger" class="sm:hidden">
+            <img src="./images/icon-hamburger.svg" alt="" aria-hidden="true" />
+          </a>
 
-  Our creations
+          <!-- menu mobile -->
+          <div
+            id="menu-mobile"
+            class="absolute top-[-100vh] left-0 flex flex-col gap-[160px] h-screen w-full pt-10 px-6 bg-black text-white sm:hidden"
+          >
+            <div class="flex justify-between items-center">
+              <a href="#">
+                <img src="./images/logo.svg" alt="Loopstudios" class="h-6" />
+              </a>
+              <a href="#" id="icon-close">
+                <img src="./images/icon-close.svg" alt="" aria-hidden="true" />
+              </a>
+            </div>
 
-  See all
+            <ul class="flex flex-col gap-6 uppercase text-[24px] leading-none">
+              <li><a href="#" class="menu-hover">About</a></li>
+              <li><a href="#" class="menu-hover">Careers</a></li>
+              <li><a href="#" class="menu-hover">Events</a></li>
+              <li><a href="#" class="menu-hover">Products</a></li>
+              <li><a href="#" class="menu-hover">Support</a></li>
+            </ul>
+          </div>
 
-  Deep earth
-  Night arcade
-  Soccer team VR
-  The grid
-  From up above VR
-  Pocket borealis
-  The curiosity
-  Make it fisheye
+          <!-- menu desktop -->
+          <ul
+            class="hidden sm:flex sm:gap-8 sm:text-white sm:font-alata sm:text-[15px] sm:leading-[1.47em]"
+          >
+            <li><a href="#" class="menu-hover">About</a></li>
+            <li><a href="#" class="menu-hover">Careers</a></li>
+            <li><a href="#" class="menu-hover">Events</a></li>
+            <li><a href="#" class="menu-hover">Products</a></li>
+            <li><a href="#" class="menu-hover">Support</a></li>
+          </ul>
+        </nav>
 
-  About
-  Careers
-  Events
-  Products
-  Support
+        <div
+          class="max-w-[336px] mt-[162px] px-6 pt-6 pb-4 border-[2px] border-solid border-white sm:max-w-[652px] sm:mt-32 sm:px-10 sm:pb-7"
+        >
+          <h1
+            class="text-[40px] text-white font-light leading-[.975em] uppercase sm:text-[72px]"
+          >
+            Immersive experiences that deliver
+          </h1>
+        </div>
+      </section>
+    </header>
 
-  © 2021 Loopstudios. All rights reserved.
+    <main>
+      <section
+        class="relative flex flex-col max-w-[732px] xl:max-w-none xl:self-stretch"
+      >
+        <picture>
+          <source
+            media="(min-width: 640px)"
+            srcset="./images/mobile/image-interactive.jpg"
+          />
+          <img
+            src="./images/mobile/image-interactive.jpg"
+            alt=""
+            aria-hidden="true"
+          />
+        </picture>
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+        <div
+          class="bg-white flex flex-col gap-4 items-center pt-12 px-3 xl:pl-24 xl:pr-0 xl:gap-6 xl:max-w-[544px] xl:absolute xl:right-0 xl:bottom-0"
+        >
+          <h2>The leader in interactive VR</h2>
+          <p>
+            Founded in 2011, Loopstudios has been producing world-class virtual
+            reality projects for some of the best companies around the globe.
+            Our award-winning creations have transformed businesses through
+            digital experiences that bind to their brand.
+          </p>
+        </div>
+      </section>
+
+      <section
+        class="flex flex-col gap-9 items-center md:self-stretch md:items-center md:gap-20"
+      >
+        <div class="md:flex md:self-stretch md:items-center md:justify-between">
+          <h2>Our creations</h2>
+          <button class="hidden md:flex">See all</button>
+        </div>
+
+        <div
+          class="pt-3 flex flex-wrap justify-center gap-6 md:gap-[30px] md:pt-0"
+        >
+          <picture class="creation-item">
+            <source
+              media="(min-width: 768px)"
+              srcset="./images/desktop/image-deep-earth.jpg"
+            />
+            <img
+              src="./images/mobile/image-deep-earth.jpg"
+              alt=""
+              aria-hidden="true"
+            />
+
+            <div class="creation-bg">
+              <span class="creation-title">Deep earth</span>
+            </div>
+          </picture>
+
+          <picture class="creation-item">
+            <source
+              media="(min-width: 768px)"
+              srcset="./images/desktop/image-night-arcade.jpg"
+            />
+            <img
+              src="./images/mobile/image-night-arcade.jpg"
+              alt=""
+              aria-hidden="true"
+            />
+
+            <div class="creation-bg">
+              <span class="creation-title">Night arcade</span>
+            </div>
+          </picture>
+
+          <picture class="creation-item">
+            <source
+              media="(min-width: 768px)"
+              srcset="./images/desktop/image-soccer-team.jpg"
+            />
+            <img
+              src="./images/mobile/image-soccer-team.jpg"
+              alt=""
+              aria-hidden="true"
+            />
+
+            <div class="creation-bg">
+              <span class="creation-title">Soccer team VR</span>
+            </div>
+          </picture>
+
+          <picture class="creation-item">
+            <source
+              media="(min-width: 768px)"
+              srcset="./images/desktop/image-grid.jpg"
+            />
+            <img
+              src="./images/mobile/image-grid.jpg"
+              alt=""
+              aria-hidden="true"
+            />
+
+            <div class="creation-bg">
+              <span class="creation-title">The grid</span>
+            </div>
+          </picture>
+
+          <picture class="creation-item">
+            <source
+              media="(min-width: 768px)"
+              srcset="./images/desktop/image-from-above.jpg"
+            />
+            <img
+              src="./images/mobile/image-from-above.jpg"
+              alt=""
+              aria-hidden="true"
+            />
+
+            <div class="creation-bg">
+              <span class="creation-title">From up above VR</span>
+            </div>
+          </picture>
+
+          <picture class="creation-item">
+            <source
+              media="(min-width: 768px)"
+              srcset="./images/desktop/image-pocket-borealis.jpg"
+            />
+            <img
+              src="./images/mobile/image-pocket-borealis.jpg"
+              alt=""
+              aria-hidden="true"
+            />
+
+            <div class="creation-bg">
+              <span class="creation-title">Pocket borealis</span>
+            </div>
+          </picture>
+
+          <picture class="creation-item">
+            <source
+              media="(min-width: 768px)"
+              srcset="./images/desktop/image-curiosity.jpg"
+            />
+            <img
+              src="./images/mobile/image-curiosity.jpg"
+              alt=""
+              aria-hidden="true"
+            />
+
+            <div class="creation-bg">
+              <span class="creation-title">The curiosity</span>
+            </div>
+          </picture>
+
+          <picture class="creation-item">
+            <source
+              media="(min-width: 768px)"
+              srcset="./images/desktop/image-fisheye.jpg"
+            />
+            <img
+              src="./images/mobile/image-fisheye.jpg"
+              alt=""
+              aria-hidden="true"
+            />
+
+            <div class="creation-bg">
+              <span class="creation-title">Make it fisheye</span>
+            </div>
+          </picture>
+        </div>
+
+        <button class="md:hidden">See all</button>
+      </section>
+    </main>
+
+    <footer>
+      <section
+        class="max-w-[1114px] mx-auto flex flex-col px-6 items-center justify-between md:py-11 md:flex-row xl:px-0"
+      >
+        <div class="pt-14 flex flex-col gap-[34px] md:pt-0 md:gap-[26px]">
+          <a href="#">
+            <img src="./images/logo.svg" alt="Loopstudios" class="h-6" />
+          </a>
+          <ul
+            class="flex flex-col gap-5 items-center font-alata text-[15px] leading-[1.47em] md:flex-row md:gap-8"
+          >
+            <li><a href="#" class="menu-hover">About</a></li>
+            <li><a href="#" class="menu-hover">Careers</a></li>
+            <li><a href="#" class="menu-hover">Events</a></li>
+            <li><a href="#" class="menu-hover">Products</a></li>
+            <li><a href="#" class="menu-hover">Support</a></li>
+          </ul>
+        </div>
+
+        <div
+          class="pt-12 pb-14 flex flex-col gap-5 items-center md:pt-0 md:pb-0 md:px-1 md:items-end md:gap-[26px]"
+        >
+          <div class="flex items-center justify-center gap-4">
+            <a href="#">
+              <img src="./images/icon-facebook.svg" alt="" aria-hidden="true" />
+            </a>
+            <a href="#">
+              <img src="./images/icon-twitter.svg" alt="" aria-hidden="true" />
+            </a>
+            <a href="#">
+              <img
+                src="./images/icon-pinterest.svg"
+                alt=""
+                aria-hidden="true"
+              />
+            </a>
+            <a href="#">
+              <img
+                src="./images/icon-instagram.svg"
+                alt=""
+                aria-hidden="true"
+              />
+            </a>
+          </div>
+          <span class="text-darkgray font-alata text-[15px] leading-[1.47em]"
+            >© 2021 Loopstudios. All rights reserved.</span
+          >
+        </div>
+      </section>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
 </html>
